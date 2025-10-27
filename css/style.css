@@ -1,0 +1,147 @@
+@import "reset.css";
+header {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 61px 11px 61px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1483px;
+  position: fixed;
+  background: linear-gradient(
+    180deg,
+    #17171a 12.02%,
+    rgba(27, 27, 33, 0.4) 100%
+  );
+  width: auto;
+  backdrop-filter: blur(15px);
+}
+body {
+  display: flex;
+  width: 1920px;
+  min-height: 5109px;
+  flex-direction: column;
+  align-items: center;
+  gap: 85px;
+  background: linear-gradient(180deg, #1a1717 25%, #000 100%);
+}
+footer {
+  display: flex;
+  padding: 30px;
+  align-items: flex-start;
+  gap: 640px;
+  background: linear-gradient(0deg, #151416 72.6%, #0e0e0f 100%);
+}
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 96px;
+  font-weight: 900;
+}
+h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 64px;
+  font-weight: 566;
+}
+h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 566;
+}
+h4 {
+  text-align: center;
+  color: #fff;
+  font-size: 64px;
+  font-weight: 900;
+}
+h5 {
+  text-align: left;
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+}
+p {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.black {
+  color: #000;
+}
+.white {
+  color: #fff;
+}
+.label {
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.headerspace {
+  height: 100px;
+}
+.name {
+  display: flex;
+  height: 20%;
+  padding: 36px;
+  align-items: flex-start;
+  gap: 10px;
+}
+.functionlist {
+  display: flex;
+  height: 60%;
+  padding: 0 557px;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.contacts {
+  display: flex;
+  height: 20%;
+  padding: 36px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 10px;
+  align-self: stretch;
+}
+.buffer {
+  display: flex;
+  padding: 24px 530px 23px 531px;
+  justify-content: center;
+  align-items: center;
+}
+.projects {
+  display: flex;
+  padding: 20px 200px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.tablet {
+  display: grid;
+  padding: 20px 0;
+  row-gap: 35px;
+  column-gap: 35px;
+  align-self: stretch;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.tab-element {
+  width: 720px;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 298px;
+  align-self: stretch;
+  border-radius: 36px;
+  background: #fff;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
