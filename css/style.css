@@ -76,6 +76,9 @@ a:hover {
   font-weight: 500;
 }
 
+.logo {
+  transform: scale(0.7);
+}
 .black {
   color: #000;
 }
