@@ -15,6 +15,7 @@ header {
   );
   width: 100%;
   backdrop-filter: blur(15px);
+  z-index: 10;
   box-sizing: border-box;
 }
 body {
@@ -26,7 +27,7 @@ body {
 }
 footer {
   display: flex;
-  padding: 50px 20px;
+  padding: 30px 20px;
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -63,6 +64,11 @@ h5 {
   color: #fff;
   font-size: 20px;
   font-weight: 400;
+}
+h6 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
 }
 p {
   font-size: 36px;
@@ -178,4 +184,31 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 30px;
+}
+.upb::before {
+  content: "Наверх";
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0px 30px;
+  }
+  h1 {
+    font-size: 64px;
+  }
+  h4 {
+    font-size: 48px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+  .upb::before {
+    content: "↑";
+  }
+  .tablet {
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, 500px);
+    grid-auto-rows: 290px;
+    overflow-y: hidden;
+  }
 }
