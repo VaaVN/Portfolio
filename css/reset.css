@@ -6,3 +6,8 @@
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+::selection {
+  background: #fff;
+  color: #000;
+  text-shadow: none;
+}

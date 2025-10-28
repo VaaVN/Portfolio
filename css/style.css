@@ -166,6 +166,13 @@ a:hover {
   justify-content: space-between;
   border-radius: 36px;
   background: #fff;
+  opacity: 100%;
+  transform: scale(1);
+  transition: opacity 0.3s ease, transform 0.4s;
+}
+.tab-element:hover {
+  opacity: 90%;
+  transform: scale(0.98);
 }
 .social-media {
   display: flex;
