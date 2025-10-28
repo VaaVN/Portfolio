@@ -1,5 +1,6 @@
 @import "fonts.css";
 @import "reset.css";
+@import "elements-ids.css";
 header {
   display: flex;
   flex-direction: row;
@@ -59,15 +60,17 @@ h4 {
 }
 h5 {
   text-align: left;
-  color: #000;
+  color: #fff;
   font-size: 20px;
   font-weight: 400;
 }
 p {
   font-size: 36px;
+  color: #fff;
   font-weight: 400;
 }
 a {
+  color: #fff;
   font-size: 36px;
   font-weight: 400;
   text-decoration: none;
@@ -79,12 +82,7 @@ a:hover {
 .logo {
   transform: scale(0.7);
 }
-.black {
-  color: #000;
-}
-.white {
-  color: #fff;
-}
+
 .label {
   height: 100%;
   width: 100%;
@@ -139,6 +137,7 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
+
 .projects {
   box-sizing: border-box;
   display: flex;
@@ -165,9 +164,10 @@ a:hover {
   align-items: flex-start;
   justify-content: space-between;
   border-radius: 36px;
-  background: #fff;
   opacity: 100%;
   transform: scale(1);
+  background-size: cover;
+  background-position: center;
   transition: opacity 0.3s ease, transform 0.4s;
 }
 .tab-element:hover {
