@@ -1,3 +1,4 @@
+@import "fonts.css";
 @import "reset.css";
 header {
   display: flex;
@@ -41,13 +42,13 @@ h2 {
   text-align: center;
   color: #fff;
   font-size: 64px;
-  font-weight: 566;
+  font-weight: 500;
 }
 h3 {
   text-align: center;
   color: #fff;
   font-size: 48px;
-  font-weight: 566;
+  font-weight: 500;
 }
 h4 {
   text-align: left;
@@ -72,7 +73,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  font-weight: 566;
+  font-weight: 500;
 }
 
 .black {
@@ -149,16 +150,17 @@ a:hover {
   justify-content: center;
   width: 100%;
   gap: 30px;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(auto-fill, 760px);
+  grid-template-columns: repeat(auto-fit, 700px);
+  grid-auto-rows: 400px;
 }
 .tab-element {
-  width: 720px;
+  width: 90%;
+  height: 90%;
   display: flex;
   padding: 20px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 298px;
+  justify-content: space-between;
   border-radius: 36px;
   background: #fff;
 }
