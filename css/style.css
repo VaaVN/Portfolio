@@ -143,7 +143,6 @@ body.no-scroll {
 .logo {
   display: block;
   flex-shrink: 0;
-  width: 132px;
   height: 46px;
 }
 
@@ -893,7 +892,6 @@ body.no-scroll {
     --header-h: 64px;
   }
   .logo {
-    width: 104px;
     height: 36px;
   }
   .nav,
