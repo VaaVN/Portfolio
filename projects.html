@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Проекты — Нечаев</title>
+    <link rel="icon" href="assets/img/Logo.svg" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/common.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html" aria-label="На главную">
+          <img src="assets/img/Logo.svg" alt="Логотип Нечаева" data-fallback />
+        </a>
+        <span class="header-line" aria-hidden="true"></span>
+        <nav class="nav" aria-label="Основная навигация">
+          <a class="nav-link" href="index.html">Главная</a>
+          <a class="nav-link" href="about.html">Обо мне</a>
+          <a class="nav-link active" href="projects.html">Проекты</a>
+        </nav>
+        <span class="header-line" aria-hidden="true"></span>
+        <button class="btn header-write" type="button" data-popup-open>
+          Написать
+        </button>
+        <button
+          class="burger"
+          type="button"
+          aria-label="Меню"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="mobile-menu" id="mobileMenu" aria-label="Мобильная навигация">
+        <a class="nav-link" href="index.html">Главная</a>
+        <a class="nav-link" href="about.html">Обо мне</a>
+        <a class="nav-link active" href="projects.html">Проекты</a>
+        <button class="btn" type="button" data-popup-open>Написать</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <h1
+            class="hero-title"
+            data-photo-title="assets/img/ProjectsTitlePhoto.png"
+          >
+            Проекты
+          </h1>
+          <p class="caption caption--left">
+            Описание интересных кейсов, над которыми я работал
+          </p>
+        </div>
+      </section>
+
+      <section class="project">
+        <div class="container">
+          <div class="project-top">
+            <div class="project-info">
+              <h2 class="section-title">Болванчик</h2>
+              <p>
+                Физический платформер про испытательного болванчика, который
+                оказался на&nbsp;почти необитаемом острове. Мы&nbsp;играем
+                за&nbsp;болванчика, у&nbsp;него нет ни&nbsp;мышц ни&nbsp;костей.
+                Управляя его конечностями надо подняться на&nbsp;гору. Этот
+                проект я&nbsp;разрабатывал в&nbsp;команде в&nbsp;рамках курса
+                по&nbsp;Unity в&nbsp;университете. У&nbsp;нас было пол года для
+                реализации этой игры.
+              </p>
+            </div>
+            <div class="project-gallery">
+              <div class="gallery-main">
+                <img
+                  src="assets/img/BolvanchikMain.png"
+                  alt="Болванчик — главный кадр"
+                  data-fallback
+                />
+              </div>
+              <div class="gallery-thumbs">
+                <button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-label="Показать кадр 2"
+                >
+                  <img
+                    src="assets/img/BolvanchikThumb1.png"
+                    alt="Болванчик — кадр 2"
+                    data-fallback
+                  />
+                </button>
+                <button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-label="Показать кадр 3"
+                >
+                  <img
+                    src="assets/img/BolvanchikThumb2.png"
+                    alt="Болванчик — кадр 3"
+                    data-fallback
+                  />
+                </button>
+                <button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-label="Показать кадр 4"
+                >
+                  <img
+                    src="assets/img/BolvanchikThumb3.png"
+                    alt="Болванчик — кадр 4"
+                    data-fallback
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+          <p class="project-text">
+            Главной задачей было сделать интересное и&nbsp;удобное, но&nbsp;при
+            этом сложное управление болванчиком. Нашим главным референсом была
+            игра Octodad. Так&nbsp;же у&nbsp;болванчика слабые швы
+            на&nbsp;руках, если он&nbsp;долго будет висеть на&nbsp;них
+            то&nbsp;он&nbsp;упадёт. Нам было важно реализовать это так,
+            что&nbsp;бы игрок не&nbsp;уставал и&nbsp;не&nbsp;бросал игру.
+          </p>
+          <figure class="project-wide">
+            <img src="assets/img/BolvanchikWide.png" data-fallback />
+          </figure>
+          <blockquote class="project-quote">
+            Для меня было в&nbsp;новинку работать в&nbsp;команде. Главный опыт
+            который дал мне этот проект&nbsp;&mdash; работа в&nbsp;группе.
+            Я&nbsp;научился прислушиваться к остальным, работать с&nbsp;гитхабом
+            и&nbsp;разделять задачи на&nbsp;нескольких человек,
+            а&nbsp;не&nbsp;брать всё на&nbsp;себя.
+          </blockquote>
+          <p class="project-text">
+            Я&nbsp;считаю, что мы&nbsp;реализовали не&nbsp;плохой проект,
+            учитывая что для большей части команды это была первая игра.
+            Болванчик получился интересным и&nbsp;не&nbsp;слишком сложным. Его
+            интересно проходить. А благодаря чистой архитектуре его можно легко
+            улучшать и&nbsp;развивать дальше.
+          </p>
+          <a
+            class="btn project-link"
+            href="https://nechaevv.itch.io/bolvanchik-prototype"
+            target="_blank"
+            rel="noopener"
+            >Открыть на itch.io</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-box">
+          <div class="footer-cols">
+            <ul class="footer-col">
+              <li>
+                <a
+                  class="ext-link"
+                  href="https://t.me/NechaevTGC"
+                  target="_blank"
+                  rel="noopener"
+                  >ТГК</a
+                >
+              </li>
+              <li>
+                <a
+                  class="ext-link"
+                  href="https://www.youtube.com/@NechaevYT"
+                  target="_blank"
+                  rel="noopener"
+                  >YouTube</a
+                >
+              </li>
+              <li>
+                <a
+                  class="ext-link"
+                  href="https://discord.gg/JDVb3kCCXa"
+                  target="_blank"
+                  rel="noopener"
+                  >Discord</a
+                >
+              </li>
+            </ul>
+            <ul class="footer-col">
+              <li>
+                <a
+                  class="ext-link"
+                  href="https://nechaevv.itch.io/"
+                  target="_blank"
+                  rel="noopener"
+                  >Itch.io</a
+                >
+              </li>
+              <li>
+                <a
+                  class="ext-link"
+                  href="https://github.com/VaaVN"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub</a
+                >
+              </li>
+            </ul>
+            <ul class="footer-col">
+              <li>
+                <a
+                  class="ext-link"
+                  href="https://www.linkedin.com/in/valerii-nechaev-3b5686452/"
+                  target="_blank"
+                  rel="noopener"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  class="ext-link"
+                  href="https://www.behance.net/NechaevVY"
+                  target="_blank"
+                  rel="noopener"
+                  >Behance</a
+                >
+              </li>
+
+              <li>
+                <a
+                  class="ext-link"
+                  href="https://x.com/NechaevVY"
+                  target="_blank"
+                  rel="noopener"
+                  >X</a
+                >
+              </li>
+            </ul>
+            <div class="footer-col footer-contacts">
+              <h3 class="footer-heading">Контакты</h3>
+              <p>
+                <span>Почта:</span>
+                <a
+                  class="ext-link"
+                  href="mailto:ne4valera@mail.ru"
+                  target="_blank"
+                  rel="noopener"
+                  >ne4valera@mail.ru</a
+                >
+              </p>
+              <p>
+                <span>ТГ:</span>
+                <a
+                  class="ext-link"
+                  href="https://t.me/Nechaev_VY"
+                  target="_blank"
+                  rel="noopener"
+                  >@nechaev_vy</a
+                >
+              </p>
+              <p>
+                <span>ВК:</span>
+                <a
+                  class="ext-link"
+                  href="https://vk.ru/nechaevvy"
+                  target="_blank"
+                  rel="noopener"
+                  >@nechaevvy</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <span class="footer-logo">Nechaev</span>
+            <span class="footer-copy">© 2026</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="popup" data-popup aria-hidden="true">
+      <div class="popup-scrim" data-popup-close></div>
+      <div
+        class="popup-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="popupTitle"
+      >
+        <h2 class="popup-title" id="popupTitle">Контакты</h2>
+        <ul class="popup-contacts">
+          <li>
+            <span>Почта:</span>
+            <a
+              class="ext-link"
+              href="mailto:ne4valera@mail.ru"
+              target="_blank"
+              rel="noopener"
+              >ne4valera@mail.ru</a
+            >
+          </li>
+          <li>
+            <span>ТГ:</span>
+            <a
+              class="ext-link"
+              href="https://t.me/Nechaev_VY"
+              target="_blank"
+              rel="noopener"
+              >@nechaev_vy</a
+            >
+          </li>
+          <li>
+            <span>ВК:</span>
+            <a
+              class="ext-link"
+              href="https://vk.ru/nechaevvy"
+              target="_blank"
+              rel="noopener"
+              >id793693957</a
+            >
+          </li>
+        </ul>
+        <button class="btn popup-close" type="button" data-popup-close>
+          Закрыть
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

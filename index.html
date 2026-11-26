@@ -1,127 +1,339 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nechaev</title>
-    <link rel="shortcut icon" href="img\Logo.svg" type="image/x-icon" />
+    <title>Нечаев — программист и художник</title>
+    <link rel="icon" href="assets/img/Logo.svg" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/db.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/main.js" defer></script>
   </head>
-  <header>
-    <img class="logo" src="img\Logo.svg" alt="img\Logo.svg" />
-    <a class="white upb" href="#"></a>
-  </header>
   <body>
-    <section class="label">
-      <div class="headerspace"></div>
-      <div class="name">
-        <p class="white">Нечаев Валерий</p>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html" aria-label="На главную">
+          <img src="assets/img/Logo.svg" alt="Логотип Нечаева" data-fallback />
+        </a>
+        <span class="header-line" aria-hidden="true"></span>
+        <nav class="nav" aria-label="Основная навигация">
+          <a class="nav-link active" href="index.html">Главная</a>
+          <a class="nav-link" href="about.html">Обо мне</a>
+          <a class="nav-link" href="projects.html">Проекты</a>
+        </nav>
+        <span class="header-line" aria-hidden="true"></span>
+        <button class="btn header-write" type="button" data-popup-open>
+          Написать
+        </button>
+        <button
+          class="burger"
+          type="button"
+          aria-label="Меню"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      <div class="functionlist">
-        <h3>
-          Один разработчик <br />
-          для нескольких проектов.
-        </h3>
-        <a href="#games"><h2 class="game-button">Игры</h2></a>
-        <a href="#sites"><h2 class="web-button">Сайты</h2></a>
-        <a href="#visual"><h2 class="visual-button">Визуал</h2></a>
+      <nav class="mobile-menu" id="mobileMenu" aria-label="Мобильная навигация">
+        <a class="nav-link active" href="index.html">Главная</a>
+        <a class="nav-link" href="about.html">Обо мне</a>
+        <a class="nav-link" href="projects.html">Проекты</a>
+        <button class="btn" type="button" data-popup-open>Написать</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="dpad" role="group" aria-label="Категории работ">
+            <button
+              class="dpad-btn"
+              type="button"
+              data-state="graphic"
+              aria-label="Графика"
+              aria-pressed="false"
+            >
+              <img src="assets/img/GraphicDpad.svg" alt="" data-fallback />
+            </button>
+            <button
+              class="dpad-btn"
+              type="button"
+              data-state="games"
+              aria-label="Игры"
+              aria-pressed="false"
+            >
+              <img src="assets/img/GamesDpad.svg" alt="" data-fallback />
+            </button>
+            <button
+              class="dpad-btn active"
+              type="button"
+              data-state="web"
+              aria-label="Сайты и приложения"
+              aria-pressed="true"
+            >
+              <img src="assets/img/WebDpad.svg" alt="" data-fallback />
+            </button>
+            <button
+              class="dpad-btn"
+              type="button"
+              data-state="nechaev"
+              aria-label="Нечаев"
+              aria-pressed="false"
+            >
+              <img src="assets/img/NechaevDpad.svg" alt="" data-fallback />
+            </button>
+          </div>
+          <div class="hero-content">
+            <h1 class="hero-title" id="heroTitle">Сайты</h1>
+            <p class="caption" id="heroCaption">И приложения</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="teaser">
+        <div class="container teaser-inner">
+          <div class="teaser-text">
+            <h2 class="teaser-title">5 лет</h2>
+            <p class="caption">Делаю игры</p>
+          </div>
+          <a class="teaser-card" href="about.html">
+            <img
+              class="teaser-img"
+              src="assets/img/AboutPreview.png"
+              alt="Превью страницы «Обо мне»"
+              data-fallback
+            />
+            <span class="teaser-label">Обо мне</span>
+            <img
+              class="teaser-arrow"
+              src="assets/img/Arrow.svg"
+              alt=""
+              data-fallback
+            />
+          </a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Игры</h2>
+          <div class="cards-grid" id="gamesCards"></div>
+        </div>
+      </section>
+
+      <section class="teaser">
+        <div class="container teaser-inner">
+          <div class="teaser-text">
+            <h2 class="teaser-title">Больше</h2>
+            <p class="caption">О моих проектах</p>
+          </div>
+          <a class="teaser-card" href="projects.html">
+            <img
+              class="teaser-img"
+              src="assets/img/ProjectsPreview.png"
+              alt="Превью страницы «Проекты»"
+              data-fallback
+            />
+            <span class="teaser-label">Проекты</span>
+            <img
+              class="teaser-arrow"
+              src="assets/img/Arrow.svg"
+              alt=""
+              data-fallback
+            />
+          </a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Сайты и приложения</h2>
+          <div class="cards-grid" id="productsCards"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Графика</h2>
+          <div class="cards-grid" id="graphicCards"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-box">
+          <div class="footer-cols">
+            <ul class="footer-col">
+              <li>
+                <a
+                  class="ext-link"
+                  href="https://t.me/NechaevTGC"
+                  target="_blank"
+                  rel="noopener"
+                  >ТГК</a
+                >
+              </li>
+              <li>
+                <a
+                  class="ext-link"
+                  href="https://www.youtube.com/@NechaevYT"
+                  target="_blank"
+                  rel="noopener"
+                  >YouTube</a
+                >
+              </li>
+              <li>
+                <a
+                  class="ext-link"
+                  href="https://discord.gg/JDVb3kCCXa"
+                  target="_blank"
+                  rel="noopener"
+                  >Discord</a
+                >
+              </li>
+            </ul>
+            <ul class="footer-col">
+              <li>
+                <a
+                  class="ext-link"
+                  href="https://nechaevv.itch.io/"
+                  target="_blank"
+                  rel="noopener"
+                  >Itch.io</a
+                >
+              </li>
+              <li>
+                <a
+                  class="ext-link"
+                  href="https://github.com/VaaVN"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub</a
+                >
+              </li>
+            </ul>
+            <ul class="footer-col">
+              <li>
+                <a
+                  class="ext-link"
+                  href="https://www.linkedin.com/in/valerii-nechaev-3b5686452/"
+                  target="_blank"
+                  rel="noopener"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  class="ext-link"
+                  href="https://www.behance.net/NechaevVY"
+                  target="_blank"
+                  rel="noopener"
+                  >Behance</a
+                >
+              </li>
+
+              <li>
+                <a
+                  class="ext-link"
+                  href="https://x.com/NechaevVY"
+                  target="_blank"
+                  rel="noopener"
+                  >X</a
+                >
+              </li>
+            </ul>
+            <div class="footer-col footer-contacts">
+              <h3 class="footer-heading">Контакты</h3>
+              <p>
+                <span>Почта:</span>
+                <a
+                  class="ext-link"
+                  href="mailto:ne4valera@mail.ru"
+                  target="_blank"
+                  rel="noopener"
+                  >ne4valera@mail.ru</a
+                >
+              </p>
+              <p>
+                <span>ТГ:</span>
+                <a
+                  class="ext-link"
+                  href="https://t.me/Nechaev_VY"
+                  target="_blank"
+                  rel="noopener"
+                  >@nechaev_vy</a
+                >
+              </p>
+              <p>
+                <span>ВК:</span>
+                <a
+                  class="ext-link"
+                  href="https://vk.ru/nechaevvy"
+                  target="_blank"
+                  rel="noopener"
+                  >@nechaevvy</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <span class="footer-logo">Nechaev</span>
+            <span class="footer-copy">© 2026</span>
+          </div>
+        </div>
       </div>
-      <div class="contacts">
-        <a class="white" href="#footer">Контакты</a>
+    </footer>
+
+    <div class="popup" data-popup aria-hidden="true">
+      <div class="popup-scrim" data-popup-close></div>
+      <div
+        class="popup-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="popupTitle"
+      >
+        <h2 class="popup-title" id="popupTitle">Контакты</h2>
+        <ul class="popup-contacts">
+          <li>
+            <span>Почта:</span>
+            <a
+              class="ext-link"
+              href="mailto:ne4valera@mail.ru"
+              target="_blank"
+              rel="noopener"
+              >ne4valera@mail.ru</a
+            >
+          </li>
+          <li>
+            <span>ТГ:</span>
+            <a
+              class="ext-link"
+              href="https://t.me/Nechaev_VY"
+              target="_blank"
+              rel="noopener"
+              >@nechaev_vy</a
+            >
+          </li>
+          <li>
+            <span>ВК:</span>
+            <a
+              class="ext-link"
+              href="https://vk.ru/nechaevvy"
+              target="_blank"
+              rel="noopener"
+              >id793693957</a
+            >
+          </li>
+        </ul>
+        <button class="btn popup-close" type="button" data-popup-close>
+          Закрыть
+        </button>
       </div>
-    </section>
-    <section class="buffer">
-      <h1>Мои проекты</h1>
-    </section>
-    <section id="games" class="projects">
-      <h4>Игры</h4>
-      <div class="tablet">
-        <a
-          href="https://elners-games.itch.io/dangerous-mail"
-          class="tab-element"
-          id="DangMail"
-        >
-          <p class="black">Dangerous Mail</p>
-          <h5 class="black">Horror,3D,singleplayer</h5>
-        </a>
-        <a
-          href="https://elners-games.itch.io/hotelmania2d"
-          class="tab-element"
-          id="HM2D"
-        >
-          <p class="black">HotelMania 2D</p>
-          <h5 class="black">2D,creepy,retro,singleplayer</h5>
-        </a>
-        <a
-          href="https://www.roblox.com/games/18145147927/GopnikCoin"
-          class="tab-element"
-          id="GCoin"
-        >
-          <p class="black">GopnikCoin</p>
-          <h5 class="black">2D,clicker,Roblox</h5>
-        </a>
-      </div>
-    </section>
-    <section id="sites" class="projects">
-      <h4>Сайты</h4>
-      <div class="tablet">
-        <a href="" class="tab-element" id="portfoliosite">
-          <p class="black">Этот сайт</p>
-          <h5 class="black">портфолио для моих проектов</h5>
-        </a>
-        <a
-          href="https://vaavn.github.io/ParmiganoPiccoloProNechaev/"
-          class="tab-element"
-          id="parmigianopiccolo"
-        >
-          <p class="black">Parmigiano Piccolo</p>
-          <h5 class="black">Лонгрид по шрифту Parmigiano Piccolo</h5>
-        </a>
-        <a
-          href="https://vaavn.github.io/EntFair-AdaptivePposter/"
-          class="tab-element"
-          id="entPosterAd"
-        >
-          <p class="black">Ent Fair</p>
-          <h5 class="black">Адаптивный веб-плакат про ярмарку деревьев</h5>
-        </a>
-      </div>
-    </section>
-    <section id="visual" class="projects">
-      <h4>
-        Визуал
-        <p>(разные портфолио)</p>
-      </h4>
-      <div class="tablet">
-        <a
-          href="https://www.behance.net/ElnerChai"
-          class="tab-element"
-          id="behance"
-        >
-          <p class="black">2D и 3D графика</p>
-          <h5 class="black">behance.net</h5>
-        </a>
-        <a
-          href="https://hsedesign.ru/designer/valeriy-nechaev-e59cea8229d146afbba67d43d4a850be"
-          class="tab-element"
-          id="HSEportfolio"
-        >
-          <p class="black">Портфолио вышки</p>
-          <h5 class="black">HseDesign.ru</h5>
-        </a>
-      </div>
-    </section>
-  </body>
-  <footer id="footer">
-    <div class="social-media">
-      <a href="https://t.me/Nechai_Elners"><h6 class="white tg"></h6></a>
-      <a href="https://elners-games.itch.io/"><h6>it.io</h6></a>
-      <a href="https://github.com/VaaVN"><h6>git</h6></a>
-      <a href="https://www.youtube.com/@elnersgames/featured"
-        ><h6 class="white yt"></h6
-      ></a>
-      <a href="https://boosty.to/elnersgames"><h6 class="white boost"></h6></a>
     </div>
-    <h6 class="white copyr"></h6>
-  </footer>
+  </body>
 </html>
